@@ -1,0 +1,7 @@
+# macOS
+brew install libimobiledevice
+
+# Linux  
+sudo apt install libimobiledevice-utils
+
+# Windows: Install iTunes, then get libimobiledevice Windows binaries and add to PATH
