@@ -34,7 +34,6 @@ function toFullProduct(label: LabelWithProduct): Product {
   }
 }
 
-// Render a label off-screen and capture as PNG blob
 async function labelToBlob(label: LabelWithProduct): Promise<Blob | null> {
   try {
     const { default: html2canvas } = await import('html2canvas')
@@ -127,7 +126,6 @@ async function downloadMultipleLabels(labels: LabelWithProduct[], filename = 'la
   }
 }
 
-// Edit modal interface
 interface EditLabelForm {
   battery_health: number
   grade: string
@@ -143,7 +141,6 @@ interface EditLabelForm {
 export function LabelList() {
   const { labels, loading, fetchLabels, deleteLabel, markPrinted } = useLabels()
 
-  // Filters
   const [search, setSearch] = useState('')
   const [model, setModel] = useState('')
   const [dateFrom, setDateFrom] = useState('')
@@ -151,7 +148,6 @@ export function LabelList() {
   const [orderBy, setOrderBy] = useState('l.created_at')
   const [orderDir, setOrderDir] = useState<'ASC' | 'DESC'>('DESC')
 
-  // UI state
   const [previewLabel, setPreviewLabel] = useState<LabelWithProduct | null>(null)
   const [previewIndex, setPreviewIndex] = useState(0)
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
@@ -160,16 +156,22 @@ export function LabelList() {
   const [downloadMenuOpen, setDownloadMenuOpen] = useState(false)
   const [toast, setToast] = useState<{ type: 'success' | 'error'; message: string } | null>(null)
 
-  // Edit state
   const [editingLabel, setEditingLabel] = useState<LabelWithProduct | null>(null)
   const [editForm, setEditForm] = useState<EditLabelForm | null>(null)
   const [isSavingEdit, setIsSavingEdit] = useState(false)
 
-  // Print refs
+  // ── Print state ──────────────────────────────────────────────────────────
+  // Always-mounted print divs — never conditionally rendered
   const printRef = useRef<HTMLDivElement>(null)
   const printAllRef = useRef<HTMLDivElement>(null)
+
+  // What's currently in the print targets
   const [printLabel, setPrintLabel] = useState<LabelWithProduct | null>(null)
   const [printQueue, setPrintQueue] = useState<LabelWithProduct[]>([])
+
+  // Pending print action — set after state update, consumed by useEffect
+  const pendingSinglePrint = useRef(false)
+  const pendingMultiPrint = useRef(false)
 
   const showToast = (type: 'success' | 'error', message: string) => {
     setToast({ type, message })
@@ -189,7 +191,7 @@ export function LabelList() {
     fetchLabels(currentFilters)
   }, [search, model, dateFrom, dateTo, orderBy, orderDir])
 
-  // Print single label
+  // ── useReactToPrint hooks (always called, never conditional) ────────────
   const handlePrint = useReactToPrint({
     contentRef: printRef,
     documentTitle: `Label-${printLabel?.product.imei ?? 'label'}`,
@@ -201,7 +203,6 @@ export function LabelList() {
     },
   })
 
-  // Print multiple labels
   const handlePrintAll = useReactToPrint({
     contentRef: printAllRef,
     documentTitle: `Labels-${new Date().toLocaleDateString()}`,
@@ -214,10 +215,29 @@ export function LabelList() {
     },
   })
 
-  const triggerPrint = (label: LabelWithProduct) => {
+  // ── Effect: fire print once DOM has updated with new label data ──────────
+  useEffect(() => {
+    if (pendingSinglePrint.current && printLabel) {
+      pendingSinglePrint.current = false
+      // Small delay to let React flush the DOM update into printRef
+      const t = setTimeout(() => handlePrint(), 100)
+      return () => clearTimeout(t)
+    }
+  }, [printLabel])
+
+  useEffect(() => {
+    if (pendingMultiPrint.current && printQueue.length > 0) {
+      pendingMultiPrint.current = false
+      const t = setTimeout(() => handlePrintAll(), 100)
+      return () => clearTimeout(t)
+    }
+  }, [printQueue])
+
+  // ── Public trigger helpers ───────────────────────────────────────────────
+  const triggerPrint = useCallback((label: LabelWithProduct) => {
+    pendingSinglePrint.current = true
     setPrintLabel(label)
-    setTimeout(() => handlePrint(), 300)
-  }
+  }, [])
 
   const triggerPrintMultiple = useCallback((targetLabels: LabelWithProduct[]) => {
     if (targetLabels.length === 0) return
@@ -225,9 +245,9 @@ export function LabelList() {
       triggerPrint(targetLabels[0])
       return
     }
+    pendingMultiPrint.current = true
     setPrintQueue(targetLabels)
-    setTimeout(() => handlePrintAll(), 300)
-  }, [])
+  }, [triggerPrint])
 
   // Selection
   const allSelected = labels.length > 0 && selectedIds.size === labels.length
@@ -248,7 +268,6 @@ export function LabelList() {
     })
   }
 
-  // Delete
   const handleDelete = async (id: string) => {
     await deleteLabel(id)
     setConfirmDelete(null)
@@ -265,7 +284,6 @@ export function LabelList() {
     fetchLabels(currentFilters)
   }
 
-  // Edit label
   const startEdit = (label: LabelWithProduct) => {
     setEditingLabel(label)
     setEditForm({
@@ -308,7 +326,6 @@ export function LabelList() {
     }
   }
 
-  // Download helpers
   const handleDownloadSelected = async () => {
     const targets = labels.filter((l) => selectedIds.has(l.id))
     if (!targets.length) return
@@ -341,7 +358,6 @@ export function LabelList() {
     finally { setIsDownloading(false) }
   }
 
-  // Print helpers
   const handlePrintAll2 = () => {
     setDownloadMenuOpen(false)
     triggerPrintMultiple(labels)
@@ -359,7 +375,6 @@ export function LabelList() {
     triggerPrintMultiple(targets)
   }
 
-  // Preview navigation
   const openPreview = (label: LabelWithProduct) => {
     const idx = labels.findIndex((l) => l.id === label.id)
     setPreviewIndex(idx >= 0 ? idx : 0)
@@ -406,7 +421,6 @@ export function LabelList() {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Bulk actions */}
           {selectedIds.size > 0 && (
             <div
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-medium"
@@ -432,7 +446,6 @@ export function LabelList() {
             </div>
           )}
 
-          {/* Download/Print dropdown menu */}
           <div className="relative">
             <button
               onClick={() => setDownloadMenuOpen((v) => !v)}
@@ -450,7 +463,6 @@ export function LabelList() {
                 className="absolute right-0 top-full mt-1 rounded-xl border shadow-xl z-40 overflow-hidden"
                 style={{ background: 'var(--color-surface-2)', borderColor: 'var(--color-border)', minWidth: 220 }}
               >
-                {/* Download section */}
                 <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider border-b"
                   style={{ color: 'var(--color-text-faint)', borderColor: 'var(--color-border)' }}>
                   Download PNG
@@ -474,7 +486,6 @@ export function LabelList() {
                   <div className="text-xs mt-0.5 ml-5" style={{ color: 'var(--color-text-faint)' }}>{selectedIds.size > 0 ? `${selectedIds.size} selected` : 'Check boxes to select'}</div>
                 </button>
 
-                {/* Print section */}
                 <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider border-b"
                   style={{ color: 'var(--color-text-faint)', borderColor: 'var(--color-border)' }}>
                   Print
@@ -561,7 +572,6 @@ export function LabelList() {
         </div>
       ) : (
         <>
-          {/* Select all bar */}
           <div className="flex items-center gap-3 px-1">
             <button onClick={toggleAll}
               className="flex items-center gap-2 text-xs font-medium transition-colors px-2 py-1 rounded-lg border"
@@ -588,7 +598,6 @@ export function LabelList() {
                     boxShadow: isSelected ? '0 0 0 2px rgba(99,102,241,0.2)' : 'none',
                   }}>
 
-                  {/* VISIBLE Selection checkbox - always shown, prominent */}
                   <button
                     onClick={(e) => toggleOne(label.id, e)}
                     className="absolute top-3 left-3 z-20"
@@ -610,9 +619,7 @@ export function LabelList() {
                     </div>
                   </button>
 
-                  {/* Clickable label preview area */}
                   <div className="p-4 pt-4 cursor-pointer" onClick={() => openPreview(label)}>
-                    {/* Thumbnail */}
                     <div className="relative overflow-hidden rounded-lg bg-white mb-3 p-2 pl-10 group/preview">
                       <div className="absolute inset-0 flex items-center justify-center rounded-lg opacity-0 group-hover/preview:opacity-100 transition-opacity z-10"
                         style={{ background: 'rgba(0,0,0,0.35)' }}>
@@ -626,7 +633,6 @@ export function LabelList() {
                       </div>
                     </div>
 
-                    {/* Meta */}
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-xs font-medium" style={{ color: 'var(--color-text)' }}>
@@ -648,7 +654,6 @@ export function LabelList() {
                         </div>
                       </div>
 
-                      {/* Action buttons - always visible */}
                       <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
                         <button onClick={() => startEdit(label)}
                           className="p-2 rounded-lg transition-colors hover:bg-amber-500/15"
@@ -690,31 +695,35 @@ export function LabelList() {
         </>
       )}
 
-      {/* Hidden single print target */}
-      {printLabel && (
-  <div style={{ position: 'fixed', left: '-9999px', top: 0 }}>
-    <div ref={printRef} className="label-print-wrapper" style={{ background: 'white' }}>
-      <LabelPreview product={toFullProduct(printLabel)} showBorder={false} />
-    </div>
-  </div>
-)}
-
-      {/* Hidden multi-print target */}
-     {printQueue.length > 0 && (
-  <div style={{ position: 'fixed', left: '-9999px', top: 0 }}>
-    <div ref={printAllRef} style={{ background: 'white' }}>
-      {printQueue.map((label, i) => (
-        <div
-          key={label.id}
-          className="label-print-wrapper"
-          style={{ pageBreakAfter: i < printQueue.length - 1 ? 'always' : 'auto' }}
-        >
-          <LabelPreview product={toFullProduct(label)} showBorder={false} />
+      {/* ── ALWAYS-MOUNTED print targets ──────────────────────────────────────
+          Never conditionally rendered. React keeps them in the DOM at all
+          times so printRef / printAllRef are always valid when useReactToPrint
+          fires. They are hidden offscreen via CSS. */}
+      <div style={{ position: 'fixed', left: '-9999px', top: 0, pointerEvents: 'none', zIndex: -1 }}>
+        {/* Single label print target */}
+        <div ref={printRef} style={{ background: 'white' }}>
+          {printLabel && (
+            <div className="label-print-wrapper">
+              <LabelPreview product={toFullProduct(printLabel)} showBorder={false} />
+            </div>
+          )}
         </div>
-      ))}
-    </div>
-  </div>
-)}
+      </div>
+
+      <div style={{ position: 'fixed', left: '-9999px', top: 0, pointerEvents: 'none', zIndex: -1 }}>
+        {/* Multi label print target */}
+        <div ref={printAllRef} style={{ background: 'white' }}>
+          {printQueue.map((label, i) => (
+            <div
+              key={label.id}
+              className="label-print-wrapper"
+              style={{ pageBreakAfter: i < printQueue.length - 1 ? 'always' : 'auto' }}
+            >
+              <LabelPreview product={toFullProduct(label)} showBorder={false} />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Preview modal */}
       {previewLabel && (
@@ -733,7 +742,6 @@ export function LabelList() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="rounded-2xl border shadow-2xl w-full max-w-lg mx-4"
             style={{ background: 'var(--color-surface)', borderColor: 'var(--color-border)' }}>
-            {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b" style={{ borderColor: 'var(--color-border)' }}>
               <div>
                 <div className="text-sm font-semibold" style={{ color: 'var(--color-text)' }}>Edit Label</div>
@@ -748,9 +756,7 @@ export function LabelList() {
               </button>
             </div>
 
-            {/* Form */}
             <div className="px-6 py-5 space-y-4 max-h-[60vh] overflow-y-auto">
-              {/* Model Code + Storage */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <label className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>Model Code</label>
@@ -768,7 +774,6 @@ export function LabelList() {
                 </div>
               </div>
 
-              {/* Color + Battery */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <label className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>Color</label>
@@ -787,7 +792,6 @@ export function LabelList() {
                 </div>
               </div>
 
-              {/* Grade + iOS */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="space-y-1.5">
                   <label className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>Grade</label>
@@ -804,7 +808,6 @@ export function LabelList() {
                 </div>
               </div>
 
-              {/* Face ID + SIM + Tested */}
               <div className="grid grid-cols-3 gap-3">
                 <div className="space-y-1.5">
                   <label className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>Face ID</label>
@@ -830,7 +833,6 @@ export function LabelList() {
               </div>
             </div>
 
-            {/* Footer */}
             <div className="px-6 py-4 flex gap-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
               <button onClick={saveEdit} disabled={isSavingEdit}
                 className="flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90 disabled:opacity-50"
@@ -847,7 +849,7 @@ export function LabelList() {
         </div>
       )}
 
-      {/* Delete confirm dialog */}
+      {/* Delete confirm */}
       {confirmDelete && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="rounded-xl border p-6 w-80 space-y-4"
@@ -872,7 +874,6 @@ export function LabelList() {
         </div>
       )}
 
-      {/* Click outside to close download menu */}
       {downloadMenuOpen && (
         <div className="fixed inset-0 z-30" onClick={() => setDownloadMenuOpen(false)} />
       )}
