@@ -223,15 +223,15 @@ function mapColor(raw: string | undefined): string | null {
   if (/^#[0-9a-fA-F]{3,8}$/.test(raw.trim())) return null
   const lower = raw.toLowerCase()
   const colorMap: [string, string][] = [
-    ['black titanium', 'BLACK TITANIUM'],
-    ['blue titanium', 'BLUE TITANIUM'],
-    ['white titanium', 'WHITE TITANIUM'],
-    ['natural titanium', 'NATURAL TITANIUM'],
+    ['black titanium', 'BLACK'],
+    ['blue titanium', 'BLUE'],
+    ['white titanium', 'WHITE'],
+    ['natural titanium', 'NATURAL'],
     ['space gray', 'SPACE GRAY'],
     ['space grey', 'SPACE GRAY'],
     ['midnight', 'BLACK'],
     ['starlight', 'WHITE'],
-    ['desert', 'NATURAL TITANIUM'],
+    ['desert', 'NATURAL'],
     ['alpine', 'WHITE'],
     ['ultramarine', 'BLUE'],
     ['teal', 'GREEN'],

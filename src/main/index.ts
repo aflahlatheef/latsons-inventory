@@ -20,6 +20,7 @@ function createWindow(): void {
     titleBarStyle: 'hiddenInset',
     frame: false,
     backgroundColor: '#0a0a0f',
+    icon: join(__dirname, '../resources/latsons-logo-blackbg.ico'),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false,
@@ -28,15 +29,18 @@ function createWindow(): void {
     },
   })
 
+  // Show window once the renderer is ready — prevents white flash
   mainWindow.on('ready-to-show', () => {
     mainWindow?.show()
   })
 
+  // Open all target="_blank" links in the system browser
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
     return { action: 'deny' }
   })
 
+  // Load the renderer — dev server in development, built HTML in production
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
   } else {
@@ -57,7 +61,7 @@ app.whenReady().then(() => {
   // Register IPC handlers
   registerProductIpc()
   registerLabelIpc()
-  registerIphoneIpc()   // ← NEW: iPhone USB handler
+  registerIphoneIpc()
 
   // Window controls IPC
   ipcMain.on('window:minimize', () => mainWindow?.minimize())

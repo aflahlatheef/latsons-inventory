@@ -724,15 +724,15 @@ function mapColor(raw) {
   if (/^#[0-9a-fA-F]{3,8}$/.test(raw.trim())) return null;
   const lower = raw.toLowerCase();
   const colorMap = [
-    ["black titanium", "BLACK TITANIUM"],
-    ["blue titanium", "BLUE TITANIUM"],
-    ["white titanium", "WHITE TITANIUM"],
-    ["natural titanium", "NATURAL TITANIUM"],
+    ["black titanium", "BLACK"],
+    ["blue titanium", "BLUE"],
+    ["white titanium", "WHITE"],
+    ["natural titanium", "NATURAL"],
     ["space gray", "SPACE GRAY"],
     ["space grey", "SPACE GRAY"],
     ["midnight", "BLACK"],
     ["starlight", "WHITE"],
-    ["desert", "NATURAL TITANIUM"],
+    ["desert", "NATURAL"],
     ["alpine", "WHITE"],
     ["ultramarine", "BLUE"],
     ["teal", "GREEN"],
@@ -902,6 +902,7 @@ function createWindow() {
     titleBarStyle: "hiddenInset",
     frame: false,
     backgroundColor: "#0a0a0f",
+    icon: path.join(__dirname, "../resources/latsons-logo-blackbg.ico"),
     webPreferences: {
       preload: path.join(__dirname, "../preload/index.js"),
       sandbox: false,

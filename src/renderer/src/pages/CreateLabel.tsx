@@ -480,7 +480,7 @@ export function CreateLabel() {
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Grade</label>
               <select value={form.grade} onChange={e => handleField("grade", e.target.value)} className={inputCls} style={inputStyle}>
-                {["A+++", "A++", "A+", "A", "B", "C"].map(g => <option key={g} value={g}>{g}</option>)}
+                {["A++", "A Grade", "B++", "B Grade"].map(g => <option key={g} value={g}>{g}</option>)}
               </select>
             </div>
             <div className="space-y-1.5">

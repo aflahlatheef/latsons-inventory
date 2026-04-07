@@ -797,7 +797,7 @@ export function LabelList() {
                   <label className="text-xs font-medium" style={{ color: 'var(--color-text-muted)' }}>Grade</label>
                   <select value={editForm.grade} onChange={(e) => setEditForm(f => f ? { ...f, grade: e.target.value } : f)}
                     className="w-full px-3 py-2 rounded-lg border text-sm outline-none" style={inputStyle}>
-                    {['A+++', 'A++', 'A+', 'A', 'B', 'C'].map(g => <option key={g} value={g}>{g}</option>)}
+                    {["A++", "A Grade", "B++", "B Grade"].map(g => <option key={g} value={g}>{g}</option>)}
                   </select>
                 </div>
                 <div className="space-y-1.5">

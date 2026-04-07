@@ -197,24 +197,24 @@ select {
 @media print {
   :root {
     --label-w: 100mm;
-    --label-h: 45mm;
+    --label-h: 50mm;
   }
 
   @page {
-    size: var(--label-w) var(--label-h);
+    size: 100mm 50mm;
     margin: 0;
   }
 
   html,
   body {
-    width: var(--label-w);
-    height: var(--label-h);
+    width: 100mm;
+    height: 50mm;
     margin: 0;
     padding: 0;
     background: white !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .no-print {
@@ -227,13 +227,13 @@ select {
 
   .label-print-wrapper {
     position: fixed;
-    top: 0;
+    top: 5mm;
     left: 0;
-    width: var(--label-w);
-    height: var(--label-h);
+    width: 100mm;
+    height: 50mm;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow: visible;
     page-break-inside: avoid;
   }
 
@@ -242,14 +242,14 @@ select {
     height: 170px !important;
     max-width: 378px !important;
     max-height: 170px !important;
-    padding: 6px 8px !important;
+    padding: 2px 8px 6px 4px !important;
     margin: 0 !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     transform-origin: top left;
-    transform: scale(calc(100mm / 378px));
+    transform: scale(1);
   }
 
   .label-print-target * {

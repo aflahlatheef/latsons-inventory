@@ -142,10 +142,10 @@ export const IPHONE_COLORS = [
   'SILVER',
   'GOLD',
   'SPACE GRAY',
-  'NATURAL TITANIUM',
-  'BLUE TITANIUM',
-  'WHITE TITANIUM',
-  'BLACK TITANIUM',
+  'NATURAL',
+  'BLUE',
+  'WHITE',
+  'GRAPHITE'
 ] as const
 
 export const PRODUCT_STATUSES: ProductStatus[] = [
