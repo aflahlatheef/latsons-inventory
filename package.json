@@ -40,7 +40,7 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "resources/latsons-logo-blackbg.ico"
+      "icon": "resources/logo1.ico"
     },
     "nsis": {
       "oneClick": false,
