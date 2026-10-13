@@ -7,6 +7,7 @@ import {
 import { LabelPreview } from "../components/label/LabelPreview";
 import type { LabelExtras } from "../components/label/LabelPreview";
 import { IphoneUSBConnect } from "../components/iphone/IphoneUSBConnect";
+import { EditableSelect } from "../components/common/EditableSelect";
 import { useBarcodeScanner } from "../hooks/useBarcodeScanner";
 import { useProducts } from "../hooks/useProducts";
 import { useLabels } from "../hooks/useLabels";
@@ -46,7 +47,10 @@ const SIM_OPTIONS = ["1S1E", "2E", "2S"] as const;
 const BATCH_PREFIXES = ["RET", "ISP", "FHP", "QAZ", "WSX", "EDC"] as const;
 const BATTERY_TYPES = ["FB", "RB"] as const;
 const REGION_BADGES = ["EU+", "DU+"] as const;
-
+const GRADE_OPTIONS = ["A++", "A Grade", "B++", "B Grade", "EU+", "L+", "L1+", "L1", "L2"] as const;
+const FACE_ID_OPTIONS = ["Working", "Not Working", "N/A"] as const;
+const TEST_STATUS_OPTIONS = ["Fully", "Partially", "Not Tested"] as const;
+//L+, 
 function getTodayParts() {
   const now = new Date();
   return { day: String(now.getDate()), month: String(now.getMonth() + 1) };
@@ -424,15 +428,25 @@ export function CreateLabel() {
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Model *</label>
-              <select value={form.model} onChange={e => handleField("model", e.target.value)} className={inputCls} style={inputStyle}>
-                {(IPHONE_MODELS as readonly string[]).map(m => <option key={m} value={m}>{m}</option>)}
-              </select>
+              <EditableSelect
+                value={form.model}
+                onChange={(v) => handleField("model", v)}
+                options={IPHONE_MODELS}
+                placeholder="Select or type a model"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Storage *</label>
-              <select value={form.storage} onChange={e => handleField("storage", e.target.value)} className={inputCls} style={inputStyle}>
-                {(IPHONE_STORAGE as readonly string[]).map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
+              <EditableSelect
+                value={form.storage}
+                onChange={(v) => handleField("storage", v)}
+                options={IPHONE_STORAGE}
+                placeholder="Select or type storage"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
           </div>
 
@@ -461,9 +475,14 @@ export function CreateLabel() {
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Color *</label>
-              <select value={form.color} onChange={e => handleField("color", e.target.value)} className={inputCls} style={inputStyle}>
-                {(IPHONE_COLORS as readonly string[]).map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
+              <EditableSelect
+                value={form.color}
+                onChange={(v) => handleField("color", v)}
+                options={IPHONE_COLORS}
+                placeholder="Select or type a color"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>
@@ -479,12 +498,17 @@ export function CreateLabel() {
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Grade</label>
-              <select value={form.grade} onChange={e => handleField("grade", e.target.value)} className={inputCls} style={inputStyle}>
-                {["A++", "A Grade", "B++", "B Grade"].map(g => <option key={g} value={g}>{g}</option>)}
-              </select>
+              <EditableSelect
+                value={form.grade}
+                onChange={(v) => handleField("grade", v)}
+                options={GRADE_OPTIONS}
+                placeholder="Select or type a grade"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
             <div className="space-y-1.5">
-              <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>iOS Version</label>
+              <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Sft Version</label>
               <input type="text" value={form.ios_version} onChange={e => handleField("ios_version", e.target.value)}
                 placeholder="iOS 18.4" className={inputCls} style={inputStyle} />
             </div>
@@ -493,9 +517,14 @@ export function CreateLabel() {
           <div className="grid grid-cols-3 gap-3">
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Face ID</label>
-              <select value={form.face_id} onChange={e => handleField("face_id", e.target.value)} className={inputCls} style={inputStyle}>
-                <option>Working</option><option>Not Working</option><option>N/A</option>
-              </select>
+              <EditableSelect
+                value={form.face_id}
+                onChange={(v) => handleField("face_id", v)}
+                options={FACE_ID_OPTIONS}
+                placeholder="Select or type"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>SIM Type</label>
@@ -516,9 +545,14 @@ export function CreateLabel() {
             </div>
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Tested</label>
-              <select value={form.test_status} onChange={e => handleField("test_status", e.target.value)} className={inputCls} style={inputStyle}>
-                <option>Fully</option><option>Partially</option><option>Not Tested</option>
-              </select>
+              <EditableSelect
+                value={form.test_status}
+                onChange={(v) => handleField("test_status", v)}
+                options={TEST_STATUS_OPTIONS}
+                placeholder="Select or type"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
           </div>
 
@@ -606,9 +640,14 @@ export function CreateLabel() {
           <div className="grid grid-cols-2 gap-3">
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Status</label>
-              <select value={form.status} onChange={e => handleField("status", e.target.value)} className={inputCls} style={inputStyle}>
-                {PRODUCT_STATUSES.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
+              <EditableSelect
+                value={form.status}
+                onChange={(v) => handleField("status", v)}
+                options={PRODUCT_STATUSES}
+                placeholder="Select or type a status"
+                className={inputCls}
+                style={inputStyle}
+              />
             </div>
             <div className="space-y-1.5">
               <label className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>Notes</label>

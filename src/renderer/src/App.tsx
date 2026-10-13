@@ -6,6 +6,7 @@ import { CreateLabel } from './pages/CreateLabel'
 import { LabelList } from './pages/LabelList'
 import { Scanner } from './pages/Scanner'
 import { Inventory } from './pages/Inventory'
+import { AddressLabel } from './pages/AddressLabel'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/labels" element={<LabelList />} />
         <Route path="/scanner" element={<Scanner />} />
         <Route path="/inventory" element={<Inventory />} />
+         <Route path="/address-label" element={<AddressLabel />} />
       </Routes>
     </Layout>
   )

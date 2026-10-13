@@ -6,12 +6,14 @@ import {
   List,
   ScanLine,
   Package,
+  MapPin,
 } from 'lucide-react'
 
 const navItems = [
   { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/create-label', icon: Tag, label: 'Create Label' },
   { to: '/labels', icon: List, label: 'All Labels' },
+  { to: '/address-label', icon: MapPin, label: 'Address Label' },
   { to: '/scanner', icon: ScanLine, label: 'Scanner' },
   { to: '/inventory', icon: Package, label: 'Inventory' },
 ]

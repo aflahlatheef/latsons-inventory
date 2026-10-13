@@ -8724,6 +8724,32 @@ const Filter = createLucideIcon("Filter", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
+const Hash = createLucideIcon("Hash", [
+  ["line", { x1: "4", x2: "20", y1: "9", y2: "9", key: "4lhtct" }],
+  ["line", { x1: "4", x2: "20", y1: "15", y2: "15", key: "vyu0kd" }],
+  ["line", { x1: "10", x2: "8", y1: "3", y2: "21", key: "1ggp8o" }],
+  ["line", { x1: "16", x2: "14", y1: "3", y2: "21", key: "weycgp" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const Landmark = createLucideIcon("Landmark", [
+  ["line", { x1: "3", x2: "21", y1: "22", y2: "22", key: "j8o0r" }],
+  ["line", { x1: "6", x2: "6", y1: "18", y2: "11", key: "10tf0k" }],
+  ["line", { x1: "10", x2: "10", y1: "18", y2: "11", key: "54lgf6" }],
+  ["line", { x1: "14", x2: "14", y1: "18", y2: "11", key: "380y" }],
+  ["line", { x1: "18", x2: "18", y1: "18", y2: "11", key: "1kevvc" }],
+  ["polygon", { points: "12 2 20 7 4 7", key: "jkujk7" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
 const LayoutDashboard = createLucideIcon("LayoutDashboard", [
   ["rect", { width: "7", height: "9", x: "3", y: "3", rx: "1", key: "10lvy0" }],
   ["rect", { width: "7", height: "5", x: "14", y: "3", rx: "1", key: "16une8" }],
@@ -8743,6 +8769,16 @@ const List = createLucideIcon("List", [
   ["line", { x1: "3", x2: "3.01", y1: "6", y2: "6", key: "1g7gq3" }],
   ["line", { x1: "3", x2: "3.01", y1: "12", y2: "12", key: "1pjlvk" }],
   ["line", { x1: "3", x2: "3.01", y1: "18", y2: "18", key: "28t2mc" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const MapPin = createLucideIcon("MapPin", [
+  ["path", { d: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z", key: "2oe9fu" }],
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ]);
 /**
  * @license lucide-react v0.383.0 - ISC
@@ -8775,9 +8811,33 @@ const Package = createLucideIcon("Package", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
+const Pen = createLucideIcon("Pen", [
+  ["path", { d: "M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z", key: "5qss01" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
 const Pencil = createLucideIcon("Pencil", [
   ["path", { d: "M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z", key: "5qss01" }],
   ["path", { d: "m15 5 4 4", key: "1mk7zo" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const Phone = createLucideIcon("Phone", [
+  [
+    "path",
+    {
+      d: "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z",
+      key: "foiqr5"
+    }
+  ]
 ]);
 /**
  * @license lucide-react v0.383.0 - ISC
@@ -8944,6 +9004,16 @@ const TrendingUp = createLucideIcon("TrendingUp", [
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
+const User = createLucideIcon("User", [
+  ["path", { d: "M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2", key: "975kel" }],
+  ["circle", { cx: "12", cy: "7", r: "4", key: "17ys0d" }]
+]);
+/**
+ * @license lucide-react v0.383.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
 const X = createLucideIcon("X", [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
@@ -8952,6 +9022,7 @@ const navItems = [
   { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/create-label", icon: Tag, label: "Create Label" },
   { to: "/labels", icon: List, label: "All Labels" },
+  { to: "/address-label", icon: MapPin, label: "Address Label" },
   { to: "/scanner", icon: ScanLine, label: "Scanner" },
   { to: "/inventory", icon: Package, label: "Inventory" }
 ];
@@ -15613,6 +15684,114 @@ function Chip({ label, value, color }) {
     }
   );
 }
+function EditableSelect({
+  value,
+  onChange,
+  options,
+  placeholder,
+  className,
+  style
+}) {
+  const [open, setOpen] = reactExports.useState(false);
+  const [highlightIndex, setHighlightIndex] = reactExports.useState(-1);
+  const wrapperRef = reactExports.useRef(null);
+  const isExactMatch = options.includes(value);
+  const filtered = value.trim().length === 0 || isExactMatch ? options : options.filter((opt) => opt.toLowerCase().includes(value.trim().toLowerCase()));
+  const visibleOptions = filtered.length > 0 ? filtered : options;
+  reactExports.useEffect(() => {
+    function handleClickOutside(e) {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+        setOpen(false);
+        setHighlightIndex(-1);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+  const selectOption = (opt) => {
+    onChange(opt);
+    setOpen(false);
+    setHighlightIndex(-1);
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { ref: wrapperRef, className: "relative", style: { width: "100%" }, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "input",
+      {
+        type: "text",
+        value,
+        onChange: (e) => {
+          onChange(e.target.value);
+          setOpen(true);
+        },
+        onFocus: () => setOpen(true),
+        onKeyDown: (e) => {
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            setOpen(true);
+            setHighlightIndex((i) => Math.min(i + 1, visibleOptions.length - 1));
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            setHighlightIndex((i) => Math.max(i - 1, 0));
+          } else if (e.key === "Enter") {
+            if (open && highlightIndex >= 0 && visibleOptions[highlightIndex]) {
+              e.preventDefault();
+              selectOption(visibleOptions[highlightIndex]);
+            } else {
+              setOpen(false);
+            }
+          } else if (e.key === "Escape") {
+            setOpen(false);
+          }
+        },
+        placeholder,
+        className,
+        style: { ...style, paddingRight: 26 },
+        autoComplete: "off"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "button",
+      {
+        type: "button",
+        tabIndex: -1,
+        onMouseDown: (e) => {
+          e.preventDefault();
+          setOpen((o) => !o);
+        },
+        className: "absolute right-2 top-1/2 -translate-y-1/2 text-xs opacity-60 hover:opacity-100",
+        style: { background: "transparent", border: "none", cursor: "pointer", color: "inherit", padding: 0 },
+        children: "▾"
+      }
+    ),
+    open && visibleOptions.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "absolute left-0 right-0 mt-1 rounded-lg border shadow-xl z-50 overflow-hidden max-h-56 overflow-y-auto",
+        style: { background: "var(--color-surface-2)", borderColor: "var(--color-border)" },
+        children: visibleOptions.map((opt, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "button",
+          {
+            type: "button",
+            onMouseDown: (e) => {
+              e.preventDefault();
+              selectOption(opt);
+            },
+            className: "w-full text-left px-3 py-2 text-sm hover:bg-white/10 transition-colors flex items-center justify-between",
+            style: {
+              color: "var(--color-text)",
+              background: i === highlightIndex ? "rgba(99,102,241,0.15)" : "transparent"
+            },
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: opt }),
+              opt === value && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: "#10b981" }, children: "✓" })
+            ]
+          },
+          opt
+        ))
+      }
+    )
+  ] });
+}
 function useBarcodeScanner(onScan, minLength = 8, scanTimeout = 100) {
   const bufferRef = reactExports.useRef("");
   const timerRef = reactExports.useRef(null);
@@ -15841,6 +16020,9 @@ const SIM_OPTIONS = ["1S1E", "2E", "2S"];
 const BATCH_PREFIXES = ["RET", "ISP", "FHP", "QAZ", "WSX", "EDC"];
 const BATTERY_TYPES = ["FB", "RB"];
 const REGION_BADGES = ["EU+", "DU+"];
+const GRADE_OPTIONS = ["A++", "A Grade", "B++", "B Grade", "EU+", "L+", "L1+", "L1", "L2"];
+const FACE_ID_OPTIONS = ["Working", "Not Working", "N/A"];
+const TEST_STATUS_OPTIONS = ["Fully", "Partially", "Not Tested"];
 function getTodayParts() {
   const now = /* @__PURE__ */ new Date();
   return { day: String(now.getDate()), month: String(now.getMonth() + 1) };
@@ -16260,11 +16442,31 @@ function CreateLabel() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Model *" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("select", { value: form.model, onChange: (e) => handleField("model", e.target.value), className: inputCls, style: inputStyle, children: IPHONE_MODELS.map((m2) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: m2, children: m2 }, m2)) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.model,
+                    onChange: (v2) => handleField("model", v2),
+                    options: IPHONE_MODELS,
+                    placeholder: "Select or type a model",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Storage *" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("select", { value: form.storage, onChange: (e) => handleField("storage", e.target.value), className: inputCls, style: inputStyle, children: IPHONE_STORAGE.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: s, children: s }, s)) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.storage,
+                    onChange: (v2) => handleField("storage", v2),
+                    options: IPHONE_STORAGE,
+                    placeholder: "Select or type storage",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
@@ -16307,7 +16509,17 @@ function CreateLabel() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Color *" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("select", { value: form.color, onChange: (e) => handleField("color", e.target.value), className: inputCls, style: inputStyle, children: IPHONE_COLORS.map((c) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: c, children: c }, c)) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.color,
+                    onChange: (v2) => handleField("color", v2),
+                    options: IPHONE_COLORS,
+                    placeholder: "Select or type a color",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: [
@@ -16333,10 +16545,20 @@ function CreateLabel() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Grade" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("select", { value: form.grade, onChange: (e) => handleField("grade", e.target.value), className: inputCls, style: inputStyle, children: ["A++", "A Grade", "B++", "B Grade"].map((g) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: g, children: g }, g)) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.grade,
+                    onChange: (v2) => handleField("grade", v2),
+                    options: GRADE_OPTIONS,
+                    placeholder: "Select or type a grade",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "iOS Version" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Sft Version" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "input",
                   {
@@ -16353,11 +16575,17 @@ function CreateLabel() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-3 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Face ID" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("select", { value: form.face_id, onChange: (e) => handleField("face_id", e.target.value), className: inputCls, style: inputStyle, children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "Working" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "Not Working" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "N/A" })
-                ] })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.face_id,
+                    onChange: (v2) => handleField("face_id", v2),
+                    options: FACE_ID_OPTIONS,
+                    placeholder: "Select or type",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "SIM Type" }),
@@ -16380,11 +16608,17 @@ function CreateLabel() {
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Tested" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("select", { value: form.test_status, onChange: (e) => handleField("test_status", e.target.value), className: inputCls, style: inputStyle, children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "Fully" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "Partially" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("option", { children: "Not Tested" })
-                ] })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.test_status,
+                    onChange: (v2) => handleField("test_status", v2),
+                    options: TEST_STATUS_OPTIONS,
+                    placeholder: "Select or type",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-4", style: { borderColor: "var(--color-border)" }, children: [
@@ -16495,7 +16729,17 @@ function CreateLabel() {
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Status" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("select", { value: form.status, onChange: (e) => handleField("status", e.target.value), className: inputCls, style: inputStyle, children: PRODUCT_STATUSES.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: s, children: s }, s)) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  EditableSelect,
+                  {
+                    value: form.status,
+                    onChange: (v2) => handleField("status", v2),
+                    options: PRODUCT_STATUSES,
+                    placeholder: "Select or type a status",
+                    className: inputCls,
+                    style: inputStyle
+                  }
+                )
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "text-xs font-medium", style: { color: "var(--color-text-muted)" }, children: "Notes" }),
@@ -17012,7 +17256,7 @@ async function downloadMultipleLabels(labels, filename = "labels") {
   if (labels.length === 1) return downloadSingleLabel(labels[0]);
   try {
     const JSZip = (await __vitePreload(async () => {
-      const { default: __vite_default__ } = await import("./jszip.min-BUY9HeD5.js").then((n2) => n2.j);
+      const { default: __vite_default__ } = await import("./jszip.min-PTghZsEu.js").then((n2) => n2.j);
       return { default: __vite_default__ };
     }, true ? [] : void 0, import.meta.url)).default;
     const zip = new JSZip();
@@ -18505,6 +18749,680 @@ function Inventory() {
     ] }) })
   ] });
 }
+const STORAGE_KEY = "address_label_entries";
+function loadEntries() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+function saveEntries(entries) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+}
+const MY_ADDRESS = {
+  name: "Aflah latheef",
+  place: "Areekode",
+  pincode: "673639",
+  phone: "8592958049",
+  landmark: ""
+};
+const LABEL_W = 420;
+const LABEL_H = 170;
+function AddressLabelView({ from, to, showBorder = true }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: "label-print-target",
+      style: {
+        width: LABEL_W,
+        height: LABEL_H,
+        background: "#fff",
+        border: showBorder ? "1px solid #d0d0d0" : "none",
+        borderRadius: showBorder ? 6 : 0,
+        boxShadow: showBorder ? "0 2px 8px rgba(0,0,0,0.08)" : "none",
+        fontFamily: "'Space Grotesk', Arial, sans-serif",
+        boxSizing: "border-box",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        padding: "8px 10px 8px 10px",
+        color: "#000000"
+      },
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { display: "flex", flex: 1, gap: 8, minHeight: 0 }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { flex: 1, borderRight: "1px dashed #aaa", paddingRight: 8, display: "flex", flexDirection: "column", justifyContent: "center" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 10, fontWeight: 800, letterSpacing: 1.5, color: "#000000", textTransform: "uppercase", marginBottom: 4 }, children: "From" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 13, fontWeight: 800, color: "#000000", lineHeight: 1.25, marginBottom: 2 }, children: from.name || "—" }),
+          from.place && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 12, color: "#000000", lineHeight: 1.3 }, children: [
+            from.place,
+            from.pincode ? ` - ${from.pincode}` : ""
+          ] }),
+          from.phone && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 12, color: "#000000", marginTop: 2 }, children: [
+            "📞 ",
+            from.phone
+          ] }),
+          from.phone && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 12, color: "#000000", marginTop: 2 }, children: "📞 8592958005" }),
+          from.landmark && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 12, color: "#000000", marginTop: 1, fontStyle: "italic" }, children: [
+            "Near: ",
+            from.landmark
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { flex: 1.4, display: "flex", flexDirection: "column", justifyContent: "center" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 10, fontWeight: 800, letterSpacing: 1.5, color: "#000000", textTransform: "uppercase", marginBottom: 4 }, children: "To" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 13, fontWeight: 900, color: "#000000", lineHeight: 1.2, marginBottom: 3 }, children: to.name || "—" }),
+          to.place && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { fontSize: 13, color: "#000000", lineHeight: 1.3, fontWeight: 600 }, children: to.place }),
+          to.pincode && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 14, fontWeight: 900, color: "#000000", letterSpacing: 2, marginTop: 2 }, children: [
+            "PIN: ",
+            to.pincode
+          ] }),
+          to.phone && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 12, color: "#000000", marginTop: 2, fontWeight: 600 }, children: [
+            "📞 ",
+            to.phone
+          ] }),
+          to.landmark && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { fontSize: 10, color: "#000000", marginTop: 2, fontWeight: 500 }, children: [
+            "Near: ",
+            to.landmark
+          ] })
+        ] })
+      ] })
+    }
+  );
+}
+function FieldWithSuggest({ label, value, onChange, placeholder, icon, suggestions = [], mono, type = "text" }) {
+  const [showSuggestions, setShowSuggestions] = reactExports.useState(false);
+  const filtered = suggestions.filter((s) => s.toLowerCase().includes(value.toLowerCase()) && s.toLowerCase() !== value.toLowerCase() && value.length > 0);
+  const inputStyle = {
+    background: "var(--color-surface-2)",
+    borderColor: value ? "rgba(16,185,129,0.4)" : "var(--color-border)",
+    color: "var(--color-text)"
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5 relative", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "text-xs font-medium flex items-center gap-1.5", style: { color: "var(--color-text-muted)" }, children: [
+      icon,
+      label
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "input",
+        {
+          type,
+          value,
+          onChange: (e) => {
+            onChange(e.target.value);
+            setShowSuggestions(true);
+          },
+          onFocus: () => setShowSuggestions(true),
+          onBlur: () => setTimeout(() => setShowSuggestions(false), 150),
+          placeholder,
+          className: "w-full px-3 py-2 rounded-lg border text-sm outline-none",
+          style: { ...inputStyle, fontFamily: mono ? "monospace" : void 0 }
+        }
+      ),
+      showSuggestions && filtered.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "div",
+        {
+          className: "absolute top-full left-0 right-0 mt-1 rounded-lg border shadow-xl z-50 overflow-hidden",
+          style: { background: "var(--color-surface-2)", borderColor: "var(--color-border)" },
+          children: filtered.map((s, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "button",
+              onMouseDown: () => {
+                onChange(s);
+                setShowSuggestions(false);
+              },
+              className: "w-full text-left px-3 py-2 text-sm hover:bg-white/10 transition-colors",
+              style: { color: "var(--color-text)" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: "var(--color-primary)" }, children: "→" }),
+                " ",
+                s
+              ]
+            },
+            i
+          ))
+        }
+      )
+    ] })
+  ] });
+}
+const EMPTY_ADDRESS = () => ({
+  name: "",
+  place: "",
+  pincode: "",
+  phone: "",
+  landmark: ""
+});
+function AddressLabel() {
+  const [toForm, setToForm] = reactExports.useState(EMPTY_ADDRESS());
+  const [fromForm, setFromForm] = reactExports.useState({ ...MY_ADDRESS });
+  const [editingFrom, setEditingFrom] = reactExports.useState(false);
+  const [savedEntries, setSavedEntries] = reactExports.useState(loadEntries);
+  const [toast, setToast] = reactExports.useState(null);
+  const [previewOpen, setPreviewOpen] = reactExports.useState(false);
+  const [confirmDelete, setConfirmDelete] = reactExports.useState(null);
+  const printRef = reactExports.useRef(null);
+  const [printData, setPrintData] = reactExports.useState(null);
+  const pendingPrint = reactExports.useRef(false);
+  const handlePrint = Z({
+    contentRef: printRef,
+    documentTitle: `Address-${toForm.name || "label"}`,
+    onAfterPrint: () => {
+      showToast("success", "Printed successfully!");
+    }
+  });
+  reactExports.useEffect(() => {
+    if (pendingPrint.current && printData) {
+      pendingPrint.current = false;
+      const t2 = setTimeout(() => handlePrint(), 80);
+      return () => clearTimeout(t2);
+    }
+  }, [printData]);
+  const showToast = (type, message) => {
+    setToast({ type, message });
+    setTimeout(() => setToast(null), 3e3);
+  };
+  const allNames = [MY_ADDRESS.name, ...savedEntries.map((e) => e.name)].filter(Boolean);
+  const allPlaces = [MY_ADDRESS.place, ...savedEntries.map((e) => e.place)].filter(Boolean);
+  const allPincodes = [MY_ADDRESS.pincode, ...savedEntries.map((e) => e.pincode)].filter(Boolean);
+  const allPhones = [...savedEntries.map((e) => e.phone)].filter(Boolean);
+  const allLandmarks = [...savedEntries.map((e) => e.landmark)].filter(Boolean);
+  const handleToNameChange = (name) => {
+    setToForm((prev) => ({ ...prev, name }));
+    const match = savedEntries.find((e) => e.name.toLowerCase() === name.toLowerCase());
+    if (match) {
+      setToForm({ name, place: match.place, pincode: match.pincode, phone: match.phone, landmark: match.landmark });
+    }
+    if (name.toLowerCase() === MY_ADDRESS.name.toLowerCase()) {
+      setToForm({ name, place: MY_ADDRESS.place, pincode: MY_ADDRESS.pincode, phone: MY_ADDRESS.phone, landmark: MY_ADDRESS.landmark });
+    }
+  };
+  const setTo = (key, value) => setToForm((prev) => ({ ...prev, [key]: value }));
+  const setFrom = (key, value) => setFromForm((prev) => ({ ...prev, [key]: value }));
+  const handleSave = () => {
+    if (!toForm.name || !toForm.place) {
+      showToast("error", "Name and Place are required");
+      return;
+    }
+    const exists = savedEntries.find((e) => e.name === toForm.name && e.phone === toForm.phone);
+    if (exists) {
+      const updated = savedEntries.map((e) => e.id === exists.id ? { ...e, ...toForm } : e);
+      setSavedEntries(updated);
+      saveEntries(updated);
+      showToast("success", "Address updated!");
+    } else {
+      const entry = { id: crypto.randomUUID(), ...toForm, created_at: (/* @__PURE__ */ new Date()).toISOString() };
+      const updated = [entry, ...savedEntries];
+      setSavedEntries(updated);
+      saveEntries(updated);
+      showToast("success", "Address saved!");
+    }
+  };
+  const handleSaveAndPrint = () => {
+    if (!toForm.name) {
+      showToast("error", "Name is required");
+      return;
+    }
+    handleSave();
+    setPrintData({ from: { ...fromForm }, to: { ...toForm } });
+    pendingPrint.current = true;
+    setPrintData((d) => d ? { ...d } : { from: { ...fromForm }, to: { ...toForm } });
+  };
+  const handlePrintNow = () => {
+    if (!toForm.name) {
+      showToast("error", "Name is required");
+      return;
+    }
+    pendingPrint.current = true;
+    setPrintData({ from: { ...fromForm }, to: { ...toForm } });
+  };
+  const loadEntry = (entry) => {
+    setToForm({ name: entry.name, place: entry.place, pincode: entry.pincode, phone: entry.phone, landmark: entry.landmark });
+  };
+  const deleteEntry = (id2) => {
+    const updated = savedEntries.filter((e) => e.id !== id2);
+    setSavedEntries(updated);
+    saveEntries(updated);
+    setConfirmDelete(null);
+    showToast("success", "Address deleted");
+  };
+  const handleReset = () => {
+    setToForm(EMPTY_ADDRESS());
+    showToast("success", "Form cleared");
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "animate-fade-in max-w-6xl", children: [
+    toast && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "fixed top-14 right-4 z-50 flex items-center gap-2 px-4 py-3 rounded-lg border text-sm font-medium shadow-lg",
+        style: {
+          background: toast.type === "success" ? "rgba(16,185,129,0.15)" : "rgba(239,68,68,0.15)",
+          borderColor: toast.type === "success" ? "rgba(16,185,129,0.4)" : "rgba(239,68,68,0.4)",
+          color: toast.type === "success" ? "#10b981" : "#ef4444"
+        },
+        children: [
+          toast.type === "success" ? /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheckBig, { size: 15 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { size: 15 }),
+          toast.message
+        ]
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-2xl font-bold", style: { color: "var(--color-text)" }, children: "Address Label" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm mt-1", style: { color: "var(--color-text-muted)" }, children: "Print 100mm × 45mm address labels — same size as iPhone labels" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "button",
+        {
+          onClick: handleReset,
+          className: "flex items-center gap-2 px-3 py-2 rounded-lg border text-sm transition-colors hover:bg-white/5",
+          style: { borderColor: "var(--color-border)", color: "var(--color-text-muted)" },
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(RotateCcw, { size: 14 }),
+            " Reset"
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-[1fr_360px] gap-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-xl border p-5", style: { background: "var(--color-surface)", borderColor: "var(--color-border)" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-xs font-semibold uppercase tracking-widest", style: { color: "var(--color-text-faint)" }, children: "From (Sender)" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "button",
+              {
+                onClick: () => setEditingFrom((v2) => !v2),
+                className: "flex items-center gap-1.5 text-xs px-2 py-1 rounded-lg border transition-colors hover:bg-white/5",
+                style: { borderColor: "rgba(99,102,241,0.3)", color: "#818cf8" },
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Pen, { size: 11 }),
+                  editingFrom ? "Done" : "Edit"
+                ]
+              }
+            )
+          ] }),
+          editingFrom ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Name",
+                value: fromForm.name,
+                onChange: (v2) => setFrom("name", v2),
+                placeholder: "Sender name",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(User, { size: 11 }),
+                suggestions: allNames
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Place",
+                value: fromForm.place,
+                onChange: (v2) => setFrom("place", v2),
+                placeholder: "City / Town",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 11 }),
+                suggestions: allPlaces
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Pincode",
+                value: fromForm.pincode,
+                onChange: (v2) => setFrom("pincode", v2),
+                placeholder: "6-digit PIN",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Hash, { size: 11 }),
+                suggestions: allPincodes,
+                mono: true
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Phone",
+                value: fromForm.phone,
+                onChange: (v2) => setFrom("phone", v2),
+                placeholder: "10-digit number",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 11 }),
+                suggestions: allPhones,
+                mono: true
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Landmark",
+                value: fromForm.landmark,
+                onChange: (v2) => setFrom("landmark", v2),
+                placeholder: "Near hospital / mosque...",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Landmark, { size: 11 }),
+                suggestions: allLandmarks
+              }
+            ) })
+          ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm space-y-1", style: { color: "var(--color-text)" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-bold text-base", children: fromForm.name || "—" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { color: "var(--color-text-muted)" }, children: [
+              fromForm.place,
+              fromForm.pincode ? ` - ${fromForm.pincode}` : ""
+            ] }),
+            fromForm.phone && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { color: "var(--color-text-muted)" }, children: [
+              "📞 ",
+              fromForm.phone
+            ] }),
+            fromForm.landmark && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { color: "var(--color-text-faint)", fontSize: 12, fontStyle: "italic" }, children: [
+              "Near: ",
+              fromForm.landmark
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-xl border p-5", style: { background: "var(--color-surface)", borderColor: "var(--color-border)" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-4", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-xs font-semibold uppercase tracking-widest", style: { color: "var(--color-text-faint)" }, children: "To (Recipient)" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "div",
+              {
+                className: "text-xs px-2 py-1 rounded-md border",
+                style: { borderColor: "rgba(99,102,241,0.3)", color: "#818cf8", background: "rgba(99,102,241,0.08)" },
+                children: "💡 Type name to get suggestions"
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Name *",
+                value: toForm.name,
+                onChange: handleToNameChange,
+                placeholder: 'e.g. "fasil" to autofill',
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(User, { size: 11 }),
+                suggestions: allNames
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Place *",
+                value: toForm.place,
+                onChange: (v2) => setTo("place", v2),
+                placeholder: "City / Town / District",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { size: 11 }),
+                suggestions: allPlaces
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Pincode",
+                value: toForm.pincode,
+                onChange: (v2) => setTo("pincode", v2),
+                placeholder: "6-digit PIN code",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Hash, { size: 11 }),
+                suggestions: allPincodes,
+                mono: true
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Phone",
+                value: toForm.phone,
+                onChange: (v2) => setTo("phone", v2),
+                placeholder: "10-digit mobile",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { size: 11 }),
+                suggestions: allPhones,
+                mono: true
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              FieldWithSuggest,
+              {
+                label: "Landmark",
+                value: toForm.landmark,
+                onChange: (v2) => setTo("landmark", v2),
+                placeholder: "Near mosque / school / bus stand...",
+                icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Landmark, { size: 11 }),
+                suggestions: allLandmarks
+              }
+            ) })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: () => setPreviewOpen(true),
+              className: "flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm border transition-all hover:bg-white/5",
+              style: { borderColor: "var(--color-border)", color: "var(--color-text-muted)" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { size: 15 }),
+                "Preview"
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: handleSave,
+              className: "flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm border transition-all hover:bg-white/5",
+              style: { borderColor: "rgba(16,185,129,0.4)", color: "#10b981" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Save, { size: 15 }),
+                "Save"
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: handlePrintNow,
+              className: "flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm border transition-all hover:bg-white/5",
+              style: { borderColor: "rgba(99,102,241,0.4)", color: "#818cf8" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Printer, { size: 15 }),
+                "Print"
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              onClick: handleSaveAndPrint,
+              className: "flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm transition-all hover:opacity-90 active:scale-95",
+              style: { background: "var(--color-primary)", color: "white" },
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Save, { size: 15 }),
+                "Save & Print"
+              ]
+            }
+          )
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-xl border p-4", style: { background: "var(--color-surface)", borderColor: "var(--color-border)" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xs font-semibold uppercase tracking-widest mb-4", style: { color: "var(--color-text-faint)" }, children: "Label Preview" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "rounded-lg overflow-hidden", style: { background: "#e8e8e8", padding: 6 }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { zoom: 0.68 }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(AddressLabelView, { from: fromForm, to: toForm, showBorder: false }) }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs mt-3 text-center", style: { color: "var(--color-text-faint)" }, children: "Preview scaled · print output is full size" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-xl border", style: { background: "var(--color-surface)", borderColor: "var(--color-border)" }, children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-4 py-3 border-b", style: { borderColor: "var(--color-border)" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-semibold uppercase tracking-widest", style: { color: "var(--color-text-faint)" }, children: "Saved Addresses" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "span",
+              {
+                className: "text-xs px-2 py-0.5 rounded-full border",
+                style: { borderColor: "var(--color-border)", color: "var(--color-text-faint)" },
+                children: savedEntries.length
+              }
+            )
+          ] }),
+          savedEntries.length === 0 ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-8 text-center text-xs", style: { color: "var(--color-text-faint)" }, children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Package, { size: 24, className: "mx-auto mb-2 opacity-30" }),
+            "No saved addresses yet"
+          ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-h-72 overflow-y-auto divide-y", style: { borderColor: "var(--color-border)" }, children: savedEntries.map((entry) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 px-4 py-2.5 hover:bg-white/5 transition-colors group", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 min-w-0 cursor-pointer", onClick: () => loadEntry(entry), children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold truncate", style: { color: "var(--color-text)" }, children: entry.name }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-xs truncate", style: { color: "var(--color-text-faint)" }, children: [
+                entry.place,
+                entry.pincode ? ` · ${entry.pincode}` : "",
+                entry.phone ? ` · ${entry.phone}` : ""
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  onClick: () => loadEntry(entry),
+                  title: "Load",
+                  className: "p-1.5 rounded hover:bg-indigo-500/15",
+                  style: { color: "#818cf8" },
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsx(Pen, { size: 12 })
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  onClick: () => {
+                    loadEntry(entry);
+                    setTimeout(() => {
+                      pendingPrint.current = true;
+                      setPrintData({ from: { ...fromForm }, to: entry });
+                    }, 50);
+                  },
+                  title: "Print",
+                  className: "p-1.5 rounded hover:bg-indigo-500/15",
+                  style: { color: "#818cf8" },
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsx(Printer, { size: 12 })
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "button",
+                {
+                  onClick: () => setConfirmDelete(entry.id),
+                  title: "Delete",
+                  className: "p-1.5 rounded hover:bg-red-500/15",
+                  style: { color: "#ef4444" },
+                  children: /* @__PURE__ */ jsxRuntimeExports.jsx(Trash2, { size: 12 })
+                }
+              )
+            ] })
+          ] }, entry.id)) })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { position: "fixed", left: "-9999px", top: 0, pointerEvents: "none", zIndex: -1 }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref: printRef, style: { background: "white" }, children: printData && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "label-print-wrapper", children: /* @__PURE__ */ jsxRuntimeExports.jsx(AddressLabelView, { from: printData.from, to: printData.to, showBorder: false }) }) }) }),
+    previewOpen && /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "fixed inset-0 z-50 flex items-center justify-center",
+        style: { background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" },
+        onClick: (e) => {
+          if (e.target === e.currentTarget) setPreviewOpen(false);
+        },
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: "relative rounded-2xl border shadow-2xl overflow-hidden",
+            style: { background: "var(--color-surface)", borderColor: "var(--color-border)", maxWidth: 560, width: "95vw" },
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-5 py-4 border-b", style: { borderColor: "var(--color-border)" }, children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm font-semibold", style: { color: "var(--color-text)" }, children: [
+                  "Label Preview — ",
+                  toForm.name || "No name",
+                  " → ",
+                  fromForm.name
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    onClick: () => setPreviewOpen(false),
+                    className: "w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10",
+                    style: { color: "var(--color-text-muted)" },
+                    children: /* @__PURE__ */ jsxRuntimeExports.jsx(X, { size: 15 })
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-6 flex justify-center", style: { background: "#e8e8e8" }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { style: { background: "white", padding: 12, borderRadius: 6 }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(AddressLabelView, { from: fromForm, to: toForm, showBorder: false }) }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-5 py-4 flex gap-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => {
+                      setPreviewOpen(false);
+                      handlePrintNow();
+                    },
+                    className: "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:opacity-90",
+                    style: { background: "var(--color-primary)", color: "white" },
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(Printer, { size: 14 }),
+                      "Print"
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => {
+                      setPreviewOpen(false);
+                      handleSaveAndPrint();
+                    },
+                    className: "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-all hover:bg-white/5",
+                    style: { borderColor: "rgba(16,185,129,0.4)", color: "#10b981" },
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(Save, { size: 14 }),
+                      "Save & Print"
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    onClick: () => setPreviewOpen(false),
+                    className: "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-all hover:bg-white/5 ml-auto",
+                    style: { borderColor: "var(--color-border)", color: "var(--color-text-muted)" },
+                    children: "Close"
+                  }
+                )
+              ] })
+            ]
+          }
+        )
+      }
+    ),
+    confirmDelete && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "fixed inset-0 z-50 flex items-center justify-center bg-black/60", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "rounded-xl border p-6 w-72 space-y-4",
+        style: { background: "var(--color-surface-2)", borderColor: "var(--color-border)" },
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-semibold", style: { color: "var(--color-text)" }, children: "Delete this address?" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                onClick: () => deleteEntry(confirmDelete),
+                className: "flex-1 py-2 rounded-lg text-sm font-medium",
+                style: { background: "rgba(239,68,68,0.2)", color: "#ef4444", border: "1px solid rgba(239,68,68,0.3)" },
+                children: "Delete"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "button",
+              {
+                onClick: () => setConfirmDelete(null),
+                className: "flex-1 py-2 rounded-lg text-sm font-medium border",
+                style: { borderColor: "var(--color-border)", color: "var(--color-text-muted)" },
+                children: "Cancel"
+              }
+            )
+          ] })
+        ]
+      }
+    ) })
+  ] });
+}
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Layout, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Navigate, { to: "/dashboard", replace: true }) }),
@@ -18512,7 +19430,8 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/create-label", element: /* @__PURE__ */ jsxRuntimeExports.jsx(CreateLabel, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/labels", element: /* @__PURE__ */ jsxRuntimeExports.jsx(LabelList, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/scanner", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Scanner, {}) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/inventory", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Inventory, {}) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/inventory", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Inventory, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/address-label", element: /* @__PURE__ */ jsxRuntimeExports.jsx(AddressLabel, {}) })
   ] }) });
 }
 client.createRoot(document.getElementById("root")).render(
